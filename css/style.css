@@ -1,0 +1,291 @@
+/* =====================================
+   МЕТОДИЧКА — YELLOW / BLACK UI
+   ===================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --yellow: #f4c430;        /* теплий жовтий */
+  --yellow-dark: #d4a514;
+  --black: #0f0f0f;
+  --graphite: #1c1c1c;
+  --bg: #f9fafb;
+  --card: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --radius: 18px;
+  --shadow: 0 18px 40px rgba(0,0,0,.12);
+  --shadow-xl: 0 30px 60px rgba(0,0,0,.18);
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: 'Inter', sans-serif;
+  background:
+    radial-gradient(circle at 10% 10%, #fff6d6 0, transparent 45%),
+    radial-gradient(circle at 90% 20%, #fff1b8 0, transparent 40%),
+    var(--bg);
+  color: var(--text);
+}
+
+/* =====================================
+   HEADER
+   ===================================== */
+
+header {
+  position: relative;
+  background: linear-gradient(120deg, var(--black), var(--graphite));
+  color: white;
+  padding: 32px 50px 40px;
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+}
+
+/* BIG 98 */
+header::after {
+  content: "98";
+  position: absolute;
+  right: 25px;
+  top: -20px;
+  font-size: 150px;
+  font-weight: 800;
+  color: rgba(244,196,48,.08);
+  pointer-events: none;
+}
+
+header h1 {
+  font-size: 34px;
+  font-weight: 800;
+}
+
+header h1 span {
+  background: var(--yellow);
+  color: var(--black);
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+/* NAV */
+nav {
+  margin-top: 16px;
+}
+
+nav a {
+  color: #fde68a;
+  text-decoration: none;
+  margin-right: 28px;
+  font-weight: 600;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--yellow);
+  transition: .3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* =====================================
+   CONTAINER
+   ===================================== */
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 50px;
+}
+
+/* =====================================
+   SECTION TITLE
+   ===================================== */
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.section-title h2 {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.section-title span {
+  background: var(--yellow);
+  color: var(--black);
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* =====================================
+   GRID / CARDS
+   ===================================== */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 34px;
+}
+
+/* CARD */
+.card {
+  position: relative;
+  background: var(--card);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: .35s;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "📚";
+  position: absolute;
+  font-size: 90px;
+  right: -10px;
+  top: -30px;
+  opacity: 0.08;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-xl);
+}
+
+.card a {
+  text-decoration: none;
+  color: var(--black);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* STICKER */
+.sticker {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* =====================================
+   CLASSES
+   ===================================== */
+
+.classes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 22px 0 30px;
+}
+
+.classes span {
+  background: #fff8db;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-weight: 700;
+  color: var(--black);
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+
+/* =====================================
+   FORMS
+   ===================================== */
+
+form {
+  max-width: 480px;
+  margin: auto;
+  background: var(--card);
+  padding: 45px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-xl);
+}
+
+form h2 {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+input, select {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+/* =====================================
+   BUTTON
+   ===================================== */
+
+button {
+  width: 100%;
+  padding: 16px;
+  border-radius: 16px;
+  border: none;
+  background: linear-gradient(120deg, var(--yellow), var(--yellow-dark));
+  color: var(--black);
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: .3s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 35px rgba(244,196,48,.55);
+}
+
+/* =====================================
+   FOOTER
+   ===================================== */
+
+footer {
+  text-align: center;
+  padding: 40px;
+  color: var(--muted);
+}
+
+/* =====================================
+   RESPONSIVE
+   ===================================== */
+
+@media (max-width: 768px) {
+  header {
+    padding: 26px;
+  }
+
+  .container {
+    padding: 26px;
+  }
+
+  header::after {
+    font-size: 90px;
+  }
+}

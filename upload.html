@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Завантаження матеріалів | Методичка</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>📘 Методичка</h1>
+  <nav>
+    <a href="index.html">Головна</a>
+    <a href="login.html">Вихід</a>
+  </nav>
+</header>
+
+<div class="container">
+  <form>
+    <h2>⬆️ Завантажити навчальний матеріал</h2>
+
+    <!-- Предмет -->
+    <select required>
+      <option value="">Оберіть предмет</option>
+      <option>Математика</option>
+      <option>Українська мова</option>
+      <option>Література</option>
+      <option>Англійська мова</option>
+      <option>Історія</option>
+      <option>Географія</option>
+      <option>Біологія</option>
+      <option>Хімія</option>
+      <option>Фізика</option>
+      <option>Інформатика</option>
+      <option>Мистецтво</option>
+      <option>Музика</option>
+      <option>Фізкультура</option>
+      <option>Трудове навчання</option>
+    </select>
+
+    <!-- Клас -->
+    <select required>
+      <option value="">Оберіть клас</option>
+      <option>5 клас</option>
+      <option>6 клас</option>
+      <option>7 клас</option>
+      <option>8 клас</option>
+      <option>9 клас</option>
+      <option>10 клас</option>
+      <option>11 клас</option>
+    </select>
+
+    <!-- Тип матеріалу -->
+    <select required>
+      <option value="">Тип матеріалу</option>
+      <option>Конспект</option>
+      <option>Презентація</option>
+      <option>Тест</option>
+      <option>Домашнє завдання</option>
+      <option>Контрольна робота</option>
+    </select>
+
+    <!-- Назва -->
+    <input type="text" placeholder="Назва матеріалу" required>
+
+    <!-- Файл -->
+    <input type="file" required>
+
+    <!-- Кнопка -->
+    <button>Завантажити матеріал</button>
+
+    <p style="
+      margin-top: 18px;
+      font-size: 14px;
+      color: #64748b;
+      text-align: center;
+    ">
+      Підтримуються файли: PDF, PPTX, DOCX, ZIP
+    </p>
+
+  </form>
+</div>
+
+</body>
+</html>
